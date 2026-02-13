@@ -18,7 +18,7 @@ export default function Header() {
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
             <img
-              src="/logo_oficial_secuoya.png"
+              src={`${import.meta.env.BASE_URL}logo_oficial_secuoya.png`}
               alt="Secuoya"
               className="h-10 w-auto"
             />
