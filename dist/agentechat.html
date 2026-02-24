@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat SSI</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+  
+  <style>
+    body {
+      background: transparent !important;
+      margin: 0;
+      padding: 0;
+    }
+
+    .chat-window-toggle,
+    div.chat-window-toggle,
+    [class*="launcher"],
+    [class*="toggle"] {
+      background: transparent !important;
+      background-color: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+    }
+
+    [class*="header"] {
+      background: #0055AA !important;
+      padding: 22px 24px !important;
+    }
+
+    [class*="header"] h1,
+    [class*="header"] h2,
+    [class*="header"] h3 {
+      font-size: 20px !important;
+      margin: 0 0 8px 0 !important;
+      line-height: 1.2 !important;
+      font-weight: 600 !important;
+    }
+
+    [class*="header"] p {
+      font-size: 15px !important;
+      margin: 0 !important;
+      line-height: 1.4 !important;
+    }
+
+    [class*="user-message"] {
+      background: #DC2626 !important;
+    }
+
+    [class*="send"] {
+      background: #DC2626 !important;
+    }
+
+    [class*="send"] svg {
+      fill: #0055AA !important;
+      color: #0055AA !important;
+    }
+  </style>
+</head>
+<body>
+
+  <script type="module">
+    import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+    
+    createChat({
+      webhookUrl: 'https://n8n.secu-ia.com/webhook/31cd3d65-eebd-40da-ac04-2dba4d8884cb/chat',
+      mode: 'window',
+      initialMessages: ['¡Hola! ¿En qué puedo ayudarte?'],
+      i18n: {
+        en: {
+          title: '¡Hola, soy SecuoyaBOT! 👋',
+          subtitle: '¡Inteligencia responsable e información segura!',
+          inputPlaceholder: 'Escribe tu mensaje...',
+        }
+      }
+    });
+
+    const intervalo = setInterval(() => {
+      const botonFlotante = document.querySelector('.chat-window-toggle');
+      
+      if (botonFlotante) {
+        clearInterval(intervalo);
+
+        const svg = botonFlotante.querySelector('svg');
+        if (svg) svg.style.display = 'none';
+        
+        const icono = document.createElement('span');
+        icono.innerHTML = '<img src="/logoAct.png" style="width: 58px; height: 58px; border-radius: 50%; box-shadow: 0 4px 12px rgba(0,0,0,0.3); object-fit: contain;">';
+        icono.style.cssText = `
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-size: 32px;
+          pointer-events: none;
+          z-index: 10;
+        `;
+        
+        botonFlotante.style.position = 'relative';
+        botonFlotante.appendChild(icono);
+
+        // ✅ Avisa al padre (App.tsx) cuando se abre o cierra el chat
+        botonFlotante.addEventListener('click', () => {
+          setTimeout(() => {
+            const ventana = document.querySelector('.chat-window');
+            if (ventana) {
+              const abierto = window.getComputedStyle(ventana).display !== 'none';
+              window.parent.postMessage(abierto ? 'chat-open' : 'chat-close', '*');
+            }
+          }, 100); // pequeño delay para que el DOM actualice
+        });
+      }
+    }, 100);
+    
+    setTimeout(() => clearInterval(intervalo), 5000);
+  </script>
+</body>
+</html>
