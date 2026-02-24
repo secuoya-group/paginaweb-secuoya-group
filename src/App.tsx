@@ -6,10 +6,16 @@ import CaseStudies from './components/CaseStudies';
 import About from './components/About';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import CourseRegistration from './components/CourseRegistration';
 
 function App() {
   const [animationComplete, setAnimationComplete] = useState(false);
   const [chatAbierto, setChatAbierto] = useState(false);
+  const isCourseRoute = location.pathname === '/curso-ia';
+
+   if (isCourseRoute) {
+    return <CourseRegistration />;
+  }
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -33,7 +39,7 @@ function App() {
       <div className="min-h-screen bg-white flex items-center justify-center overflow-hidden">
         <div className="w-96 opacity-100 animate-logo-fade-out">
           <img
-            src={`${import.meta.env.BASE_URL}logo_oficial_secuoya.png`}
+            src={`${import.meta.env.BASE_URL}logoAct.png`}
             alt="Secuoya Logo"
             className="w-full h-auto"
           />

@@ -44,8 +44,8 @@ export default function Services() {
               className="group p-8 bg-gradient-to-br from-white to-gray-50 rounded-xl border border-gray-200 hover:border-emerald-500 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 animate-slide-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="bg-emerald-100 w-16 h-16 rounded-lg flex items-center justify-center mb-6 group-hover:bg-emerald-600 transition-colors duration-300">
-                <service.icon className="text-emerald-600 group-hover:text-white transition-colors duration-300" size={32} />
+              <div className="bg-blue-100 w-16 h-16 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors duration-300">
+                <service.icon className="text-blue-600 group-hover:text-white transition-colors duration-300" size={32} />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
               <p className="text-gray-600 leading-relaxed">{service.description}</p>

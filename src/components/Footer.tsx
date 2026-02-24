@@ -16,9 +16,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
             <img
-              src="/logo_oficial_secuoya.png"
+              src="/logoAct.png"
               alt="Secuoya"
-              className="h-12 w-auto mb-4 brightness-0 invert"
+              className="h-20 w-auto mb-4 brightness-0 invert"
             />
             <p className="text-gray-400 leading-relaxed">
               Transformando el futuro a través de la innovación tecnológica y la excelencia en el servicio.
@@ -29,22 +29,22 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Enlaces Rápidos</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#inicio" className="text-gray-400 hover:text-emerald-400 transition-colors duration-300">
+                <a href="#inicio" className="text-gray-400 hover:text-blue-400 transition-colors duration-300">
                   Inicio
                 </a>
               </li>
               <li>
-                <a href="#servicios" className="text-gray-400 hover:text-emerald-400 transition-colors duration-300">
+                <a href="#servicios" className="text-gray-400 hover:text-blue-400 transition-colors duration-300">
                   Servicios
                 </a>
               </li>
               <li>
-                <a href="#nosotros" className="text-gray-400 hover:text-emerald-400 transition-colors duration-300">
+                <a href="#nosotros" className="text-gray-400 hover:text-blue-400 transition-colors duration-300">
                   Nosotros
                 </a>
               </li>
               <li>
-                <a href="#contacto" className="text-gray-400 hover:text-emerald-400 transition-colors duration-300">
+                <a href="#contacto" className="text-gray-400 hover:text-blue-400 transition-colors duration-300">
                   Contacto
                 </a>
               </li>
@@ -59,7 +59,7 @@ export default function Footer() {
                   key={index}
                   href={social.href}
                   aria-label={social.label}
-                  className="bg-gray-800 p-3 rounded-lg hover:bg-emerald-600 transition-all duration-300 transform hover:scale-110"
+                  className="bg-gray-800 p-3 rounded-lg hover:bg-blue-600 transition-all duration-300 transform hover:scale-110"
                 >
                   <social.icon size={20} />
                 </a>

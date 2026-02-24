@@ -10,17 +10,18 @@ export default function Header() {
     { name: 'Casos de Éxito', href: '#casos-exito' },
     { name: 'Nosotros', href: '#nosotros' },
     { name: 'Contacto', href: '#contacto' },
+    { name: 'Curso IA', href: '/curso-ia' },
   ];
 
   return (
     <header className="fixed top-0 left-0 right-0 bg-white shadow-md z-50 animate-fade-in">
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
             <img
-              src="/logo_oficial_secuoya.png"
+              src="/logoAct.png"
               alt="Secuoya"
-              className="h-10 w-auto"
+              className="h-10 w-auto object-contain"
             />
           </div>
 
@@ -30,7 +31,7 @@ export default function Header() {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-gray-700 hover:text-emerald-600 px-3 py-2 text-sm font-medium transition-colors duration-300"
+                  className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors duration-300"
                 >
                   {item.name}
                 </a>
@@ -41,7 +42,7 @@ export default function Header() {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-700 hover:text-emerald-600 p-2"
+              className="text-gray-700 hover:text-blue-600 p-2"
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -56,7 +57,7 @@ export default function Header() {
               <a
                 key={item.name}
                 href={item.href}
-                className="block text-gray-700 hover:text-emerald-600 hover:bg-gray-50 px-3 py-2 text-base font-medium transition-colors duration-300"
+                className="block text-gray-700 hover:text-blue-600 hover:bg-gray-50 px-3 py-2 text-base font-medium transition-colors duration-300"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}

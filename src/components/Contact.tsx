@@ -46,7 +46,7 @@ export default function Contact() {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-300"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
                   required
                 />
               </div>
@@ -61,7 +61,7 @@ export default function Contact() {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-300"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
                   required
                 />
               </div>
@@ -76,7 +76,7 @@ export default function Contact() {
                   name="subject"
                   value={formData.subject}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-300"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
                   required
                 />
               </div>
@@ -91,14 +91,14 @@ export default function Contact() {
                   value={formData.message}
                   onChange={handleChange}
                   rows={6}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-300 resize-none"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 resize-none"
                   required
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-emerald-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-emerald-700 transition-all duration-300 flex items-center justify-center gap-2 transform hover:scale-105"
+                className="w-full bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300 flex items-center justify-center gap-2 transform hover:scale-105"
               >
                 Enviar mensaje
                 <Send size={20} />
@@ -107,13 +107,13 @@ export default function Contact() {
           </div>
 
           <div className="space-y-8 animate-slide-up" style={{ animationDelay: '0.2s' }}>
-            <div className="bg-gradient-to-br from-emerald-50 to-white p-8 rounded-xl border border-emerald-200">
+            <div className="bg-gradient-to-br from-blue-50 to-white p-8 rounded-xl border border-blue-200">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Información de Contacto</h3>
 
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="bg-emerald-100 p-3 rounded-lg">
-                    <Mail className="text-emerald-600" size={24} />
+                  <div className="bg-blue-100 p-3 rounded-lg">
+                    <Mail className="text-blue-600" size={24} />
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">Email</h4>
@@ -122,8 +122,8 @@ export default function Contact() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="bg-emerald-100 p-3 rounded-lg">
-                    <Phone className="text-emerald-600" size={24} />
+                  <div className="bg-blue-100 p-3 rounded-lg">
+                    <Phone className="text-blue-600" size={24} />
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">Teléfono</h4>
@@ -132,8 +132,8 @@ export default function Contact() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="bg-emerald-100 p-3 rounded-lg">
-                    <MapPin className="text-emerald-600" size={24} />
+                  <div className="bg-blue-100 p-3 rounded-lg">
+                    <MapPin className="text-blue-600" size={24} />
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">Ubicación</h4>
@@ -143,7 +143,7 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="bg-emerald-600 text-white p-8 rounded-xl">
+            <div className="bg-blue-600 text-white p-8 rounded-xl">
               <h3 className="text-2xl font-bold mb-4">Horario de Atención</h3>
               <p className="mb-2">Lunes a Viernes: 8:00 - 18:00</p>
               

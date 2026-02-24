@@ -83,25 +83,25 @@ export default function CaseStudies() {
                 onClick={() => setSelectedCase(selectedCase === caseStudy.id ? null : caseStudy.id)}
                 className="w-full text-left"
               >
-                <div className="bg-gradient-to-r from-emerald-50 to-white p-8 rounded-xl border-2 border-gray-200 hover:border-emerald-500 hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden relative"
+                <div className="bg-gradient-to-r from-blue-50 to-white p-8 rounded-xl border-2 border-gray-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden relative"
                 >
-                  <div className="absolute inset-0 bg-gradient-to-r from-emerald-600 to-transparent opacity-0 group-hover:opacity-5 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-transparent opacity-0 group-hover:opacity-5 transition-opacity duration-300" />
 
                   <div className="relative z-10">
                     <div className="flex items-start justify-between mb-4">
                       <div>
-                        <h3 className="text-2xl font-bold text-gray-900 mb-2 group-hover:text-emerald-600 transition-colors duration-300">
+                        <h3 className="text-2xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors duration-300">
                           {caseStudy.title}
                         </h3>
                         <div className="flex items-center gap-4 text-sm text-gray-600">
-                          <span className="font-semibold text-emerald-600">{caseStudy.company}</span>
-                          <span className="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full">
+                          <span className="font-semibold text-blue-600">{caseStudy.company}</span>
+                          <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full">
                             {caseStudy.industry}
                           </span>
                         </div>
                       </div>
                       <div
-                        className={`text-emerald-600 text-2xl transition-transform duration-300 ${
+                        className={`text-blue-600 text-2xl transition-transform duration-300 ${
                           selectedCase === caseStudy.id ? 'rotate-180' : ''
                         }`}
                       >
@@ -131,10 +131,10 @@ export default function CaseStudies() {
                             {caseStudy.results.map((result, resultIndex) => (
                               <div
                                 key={resultIndex}
-                                className="bg-white p-4 rounded-lg border border-emerald-200 hover:border-emerald-500 transition-colors duration-300"
+                                className="bg-white p-4 rounded-lg border border-blue-200 hover:border-blue-500 transition-colors duration-300"
                               >
-                                <result.icon className="text-emerald-600 mb-2" size={24} />
-                                <p className="text-2xl font-bold text-emerald-600 mb-1">
+                                <result.icon className="text-blue-600 mb-2" size={24} />
+                                <p className="text-2xl font-bold text-blue-600 mb-1">
                                   {result.value}
                                 </p>
                                 <p className="text-sm text-gray-600">{result.metric}</p>
@@ -151,7 +151,7 @@ export default function CaseStudies() {
           ))}
         </div>
 
-        <div className="mt-12 p-8 bg-gradient-to-br from-emerald-50 to-white rounded-xl border-2 border-emerald-200 text-center animate-fade-in">
+        <div className="mt-12 p-8 bg-gradient-to-br from-blue-50 to-white rounded-xl border-2 border-blue-200 text-center animate-fade-in">
           <h3 className="text-2xl font-bold text-gray-900 mb-3">
             ¿Listo para tu transformación?
           </h3>
@@ -160,7 +160,7 @@ export default function CaseStudies() {
           </p>
           <a
             href="#contacto"
-            className="inline-block bg-emerald-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-emerald-700 transition-all duration-300 transform hover:scale-105"
+            className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300 transform hover:scale-105"
           >
             Inicia tu Proyecto
           </a>

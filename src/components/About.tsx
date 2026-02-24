@@ -35,7 +35,7 @@ export default function About() {
   ];
 
   return (
-    <section id="nosotros" className="py-20 bg-gradient-to-br from-emerald-50 to-white">
+    <section id="nosotros" className="py-20 bg-gradient-to-br from-blue-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -54,8 +54,8 @@ export default function About() {
               className="flex items-start gap-6 p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 animate-slide-up"
               style={{ animationDelay: `${index * 0.15}s` }}
             >
-              <div className="bg-emerald-100 p-4 rounded-lg flex-shrink-0">
-                <value.icon className="text-emerald-600" size={32} />
+              <div className="bg-blue-100 p-4 rounded-lg flex-shrink-0">
+                <value.icon className="text-blue-600" size={32} />
               </div>
               <div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-3">{value.title}</h3>
