@@ -12,14 +12,9 @@ import { useLocation } from 'react-router-dom';
 function App() {
   const [animationComplete, setAnimationComplete] = useState(false);
   const [chatAbierto, setChatAbierto] = useState(false);
-   const location = useLocation();
+  const location = useLocation();
   const isCourseRoute = location.pathname === '/curso-ia';
-  
-
-   if (isCourseRoute) {
-    return <CourseRegistration />;
-  }
-
+ 
   useEffect(() => {
     const timer = setTimeout(() => {
       setAnimationComplete(true);
@@ -27,6 +22,7 @@ function App() {
 
     return () => clearTimeout(timer);
   }, []);
+  
 
   useEffect(() => {
     const handleMessage = (e: MessageEvent) => {
@@ -37,6 +33,10 @@ function App() {
     return () => window.removeEventListener('message', handleMessage);
   }, []);
 
+   if (isCourseRoute) {
+    return <CourseRegistration />;
+  }
+  
   if (!animationComplete) {
     return (
       <div className="min-h-screen bg-white flex items-center justify-center overflow-hidden">
