@@ -1,5 +1,7 @@
 import { ArrowRight, CheckCircle, Brain, Users, Award } from 'lucide-react';
 import { useState } from 'react';
+import logoActual from './assets/logoActual.png';
+import HombreGestionando from './assets/HombreGestionando.jpg';
 
 export default function CourseRegistration() {
   const [formData, setFormData] = useState({
@@ -102,9 +104,9 @@ export default function CourseRegistration() {
         <header className="fixed top-0 left-0 right-0 bg-gradient-to-b from-gray-950 to-transparent z-50">
           <nav className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
             <div className="flex items-center justify-between">
-              <a href="/" className="flex items-center gap-2">
+              <a href="./" className="flex items-center gap-2">
                 <img
-                  src={`${import.meta.env.BASE_URL}logoActual.png`}
+                  src={logoActual}
                   alt="Secuoya"
                   className="h-12 w-auto"
                 />
@@ -175,7 +177,7 @@ export default function CourseRegistration() {
                               <div className="relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl border border-blue-500 border-opacity-30 overflow-hidden h-full flex items-center justify-center">
 
                                   <img
-                                      src={`${import.meta.env.BASE_URL}HombreGestionando.jpg`}
+                                      src={HombreGestionando}
                                       alt="Inteligencia Artificial"
                                       className="w-full h-full object-cover"
                                   />
