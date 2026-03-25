@@ -1,13 +1,13 @@
-import { Github, Linkedin, Twitter, Mail } from 'lucide-react';
+import { Github, Linkedin, Instagram, Mail } from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
     { icon: Github, href: '#', label: 'Github' },
-    { icon: Linkedin, href: '#', label: 'LinkedIn' },
-    { icon: Twitter, href: '#', label: 'Twitter' },
-    { icon: Mail, href: '#', label: 'Email' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/company/secuoya-strategy-ia/posts/?feedView=all', label: 'LinkedIn' },
+  { icon: Instagram, href: 'https://www.instagram.com/secuoya.ia/', label: 'Instagram' },
+  { icon: Mail, href: 'mailto:gerencia.ti@secu-ia.com', label: 'Email' },
   ];
 
   return (
@@ -59,6 +59,8 @@ export default function Footer() {
                   key={index}
                   href={social.href}
                   aria-label={social.label}
+                  target='_blank'
+                  rel='noopener noreferrer'
                   className="bg-gray-800 p-3 rounded-lg hover:bg-blue-600 transition-all duration-300 transform hover:scale-110"
                 >
                   <social.icon size={20} />
